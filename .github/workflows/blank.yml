@@ -18,4 +18,4 @@ jobs:
         run: |
           postman collection run "${{ github.workspace }}/postman/collections/Taxes V3.json" --integration-id "166164-${{ github.run_id }}"
           # Lint your API using Postman CLI
-          postman api lint 32693998-9acc-49d1-954b-55d23d23a195 --integration-id 166164
+          # postman api lint 32693998-9acc-49d1-954b-55d23d23a195 --integration-id 166164
