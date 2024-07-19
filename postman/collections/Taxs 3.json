@@ -1,0 +1,2613 @@
+{
+	"info": {
+		"_postman_id": "6e36f079-4d49-4637-8f72-c50b97074dd6",
+		"name": "Taxs 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "16443770-6e36f079-4d49-4637-8f72-c50b97074dd6"
+	},
+	"item": [
+		{
+			"name": "crm",
+			"item": [
+				{
+					"name": "v3",
+					"item": [
+						{
+							"name": "objects",
+							"item": [
+								{
+									"name": "taxes",
+									"item": [
+										{
+											"name": "merge",
+											"item": [
+												{
+													"name": "Merge two taxes with same type",
+													"id": "3c3c838b-806a-4a6b-84de-8b8cabce06f1",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "oauth2",
+															"oauth2": [
+																{
+																	"key": "scope",
+																	"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+																	"type": "string"
+																},
+																{
+																	"key": "accessTokenUrl",
+																	"value": "https://api.hubapi.com/oauth/v1/token",
+																	"type": "string"
+																},
+																{
+																	"key": "authUrl",
+																	"value": "https://app.hubspot.com/oauth/authorize",
+																	"type": "string"
+																},
+																{
+																	"key": "grant_type",
+																	"value": "authorization_code",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"objectIdToMerge\": \"<string>\",\n  \"primaryObjectId\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/crm/v3/objects/taxes/merge",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"crm",
+																"v3",
+																"objects",
+																"taxes",
+																"merge"
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "8b4abb6f-3f90-4dad-b9f0-26fac9577c1a",
+															"name": "successful operation",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"objectIdToMerge\": \"<string>\",\n  \"primaryObjectId\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/merge",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		"merge"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"createdAt\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"properties\": {\n    \"id2\": \"<string>\",\n    \"adipisicing2dc\": \"<string>\",\n    \"culpa09\": \"<string>\"\n  },\n  \"updatedAt\": \"<dateTime>\",\n  \"propertiesWithHistory\": {\n    \"deserunt836\": [\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      },\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      }\n    ],\n    \"eaf3\": [\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      },\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      }\n    ]\n  },\n  \"archived\": \"<boolean>\",\n  \"archivedAt\": \"<dateTime>\"\n}"
+														},
+														{
+															"id": "a4e9934c-8844-4830-b559-0517439902a8",
+															"name": "An error occurred.",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"objectIdToMerge\": \"<string>\",\n  \"primaryObjectId\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/merge",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		"merge"
+																	]
+																}
+															},
+															"status": "Internal Server Error",
+															"code": 500,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+														}
+													]
+												}
+											],
+											"id": "2d04c019-ec1b-46d7-bb23-dfb2893d3e88"
+										},
+										{
+											"name": "gdpr-delete",
+											"item": [
+												{
+													"name": "GDPR DELETE",
+													"id": "cc469818-275c-47eb-9988-9eb6fd82eba0",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "oauth2",
+															"oauth2": [
+																{
+																	"key": "scope",
+																	"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+																	"type": "string"
+																},
+																{
+																	"key": "accessTokenUrl",
+																	"value": "https://api.hubapi.com/oauth/v1/token",
+																	"type": "string"
+																},
+																{
+																	"key": "authUrl",
+																	"value": "https://app.hubspot.com/oauth/authorize",
+																	"type": "string"
+																},
+																{
+																	"key": "grant_type",
+																	"value": "authorization_code",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"objectId\": \"<string>\",\n  \"idProperty\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/crm/v3/objects/taxes/gdpr-delete",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"crm",
+																"v3",
+																"objects",
+																"taxes",
+																"gdpr-delete"
+															]
+														},
+														"description": "Permanently delete a contact and all associated content to follow GDPR. Use optional property 'idProperty' set to 'email' to identify contact by email address. If email address is not found, the email address will be added to a blocklist and prevent it from being used in the future."
+													},
+													"response": [
+														{
+															"id": "0a78b111-f56a-48b0-a300-13f6ef53c08d",
+															"name": "No content",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"objectId\": \"<string>\",\n  \"idProperty\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/gdpr-delete",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		"gdpr-delete"
+																	]
+																}
+															},
+															"status": "No Content",
+															"code": 204,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": []
+														},
+														{
+															"id": "04191ae3-d2ec-4f78-abc2-8a1a21e3c1fd",
+															"name": "An error occurred.",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"objectId\": \"<string>\",\n  \"idProperty\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/gdpr-delete",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		"gdpr-delete"
+																	]
+																}
+															},
+															"status": "Internal Server Error",
+															"code": 500,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+														}
+													]
+												}
+											],
+											"id": "629c99e3-997e-4b6c-97ff-9f7fdeb94c3f"
+										},
+										{
+											"name": "{taxId}",
+											"item": [
+												{
+													"name": "Read",
+													"id": "8faae7eb-47c2-4b0d-8112-bf9bc643d1df",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "oauth2",
+															"oauth2": [
+																{
+																	"key": "scope",
+																	"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+																	"type": "string"
+																},
+																{
+																	"key": "accessTokenUrl",
+																	"value": "https://api.hubapi.com/oauth/v1/token",
+																	"type": "string"
+																},
+																{
+																	"key": "authUrl",
+																	"value": "https://app.hubspot.com/oauth/authorize",
+																	"type": "string"
+																},
+																{
+																	"key": "grant_type",
+																	"value": "authorization_code",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId?properties=<string>&properties=<string>&propertiesWithHistory=<string>&propertiesWithHistory=<string>&associations=<string>&associations=<string>&archived=false&idProperty=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"crm",
+																"v3",
+																"objects",
+																"taxes",
+																":taxId"
+															],
+															"query": [
+																{
+																	"key": "properties",
+																	"value": "<string>",
+																	"description": "A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored."
+																},
+																{
+																	"key": "properties",
+																	"value": "<string>",
+																	"description": "A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored."
+																},
+																{
+																	"key": "propertiesWithHistory",
+																	"value": "<string>",
+																	"description": "A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored."
+																},
+																{
+																	"key": "propertiesWithHistory",
+																	"value": "<string>",
+																	"description": "A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored."
+																},
+																{
+																	"key": "associations",
+																	"value": "<string>",
+																	"description": "A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored."
+																},
+																{
+																	"key": "associations",
+																	"value": "<string>",
+																	"description": "A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored."
+																},
+																{
+																	"key": "archived",
+																	"value": "false",
+																	"description": "Whether to return only results that have been archived."
+																},
+																{
+																	"key": "idProperty",
+																	"value": "<string>",
+																	"description": "The name of a property whose values are unique for this object type"
+																}
+															],
+															"variable": [
+																{
+																	"key": "taxId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																}
+															]
+														},
+														"description": "Read an Object identified by `{taxId}`. `{taxId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param."
+													},
+													"response": [
+														{
+															"id": "578400e3-31e2-449f-8fbd-34bd313304df",
+															"name": "successful operation",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId?properties=<string>&propertiesWithHistory=<string>&associations=<string>&archived=false&idProperty=<string>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		":taxId"
+																	],
+																	"query": [
+																		{
+																			"description": "A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.",
+																			"key": "properties",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.",
+																			"key": "propertiesWithHistory",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.",
+																			"key": "associations",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "Whether to return only results that have been archived.",
+																			"key": "archived",
+																			"value": "false"
+																		},
+																		{
+																			"description": "The name of a property whose values are unique for this object type",
+																			"key": "idProperty",
+																			"value": "<string>"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "taxId"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"createdAt\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"properties\": {\n    \"voluptate_8\": \"<string>\",\n    \"nisi5c\": \"<string>\"\n  },\n  \"updatedAt\": \"<dateTime>\",\n  \"propertiesWithHistory\": {\n    \"commodo_051\": [\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      },\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      }\n    ]\n  },\n  \"archived\": \"<boolean>\",\n  \"archivedAt\": \"<dateTime>\",\n  \"associations\": {\n    \"ut3\": {\n      \"results\": [\n        {\n          \"id\": \"<string>\",\n          \"type\": \"<string>\"\n        },\n        {\n          \"id\": \"<string>\",\n          \"type\": \"<string>\"\n        }\n      ],\n      \"paging\": {\n        \"next\": {\n          \"after\": \"<string>\",\n          \"link\": \"<string>\"\n        },\n        \"prev\": {\n          \"before\": \"<string>\",\n          \"link\": \"<string>\"\n        }\n      }\n    }\n  }\n}"
+														},
+														{
+															"id": "f593db29-47b7-4475-bfc9-a2cb742e52c1",
+															"name": "An error occurred.",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId?properties=<string>&propertiesWithHistory=<string>&associations=<string>&archived=false&idProperty=<string>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		":taxId"
+																	],
+																	"query": [
+																		{
+																			"description": "A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.",
+																			"key": "properties",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored.",
+																			"key": "propertiesWithHistory",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.",
+																			"key": "associations",
+																			"value": "<string>"
+																		},
+																		{
+																			"description": "Whether to return only results that have been archived.",
+																			"key": "archived",
+																			"value": "false"
+																		},
+																		{
+																			"description": "The name of a property whose values are unique for this object type",
+																			"key": "idProperty",
+																			"value": "<string>"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "taxId"
+																		}
+																	]
+																}
+															},
+															"status": "Internal Server Error",
+															"code": 500,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+														}
+													]
+												},
+												{
+													"name": "Archive",
+													"id": "64144cf3-10d5-46e2-bb7c-96ac50000cde",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "oauth2",
+															"oauth2": [
+																{
+																	"key": "scope",
+																	"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+																	"type": "string"
+																},
+																{
+																	"key": "accessTokenUrl",
+																	"value": "https://api.hubapi.com/oauth/v1/token",
+																	"type": "string"
+																},
+																{
+																	"key": "authUrl",
+																	"value": "https://app.hubspot.com/oauth/authorize",
+																	"type": "string"
+																},
+																{
+																	"key": "grant_type",
+																	"value": "authorization_code",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"crm",
+																"v3",
+																"objects",
+																"taxes",
+																":taxId"
+															],
+															"variable": [
+																{
+																	"key": "taxId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																}
+															]
+														},
+														"description": "Move an Object identified by `{taxId}` to the recycling bin."
+													},
+													"response": [
+														{
+															"id": "2e43b192-aef6-4e16-a7c9-88ee5fb0d6a6",
+															"name": "No content",
+															"originalRequest": {
+																"method": "DELETE",
+																"header": [
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		":taxId"
+																	],
+																	"variable": [
+																		{
+																			"key": "taxId"
+																		}
+																	]
+																}
+															},
+															"status": "No Content",
+															"code": 204,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": []
+														},
+														{
+															"id": "84c356ae-1474-4a73-80e5-3c72420554a6",
+															"name": "An error occurred.",
+															"originalRequest": {
+																"method": "DELETE",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		":taxId"
+																	],
+																	"variable": [
+																		{
+																			"key": "taxId"
+																		}
+																	]
+																}
+															},
+															"status": "Internal Server Error",
+															"code": 500,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+														}
+													]
+												},
+												{
+													"name": "Update",
+													"id": "7a4727b6-3453-42ea-8ce7-c67e6cf9b407",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "oauth2",
+															"oauth2": [
+																{
+																	"key": "scope",
+																	"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+																	"type": "string"
+																},
+																{
+																	"key": "accessTokenUrl",
+																	"value": "https://api.hubapi.com/oauth/v1/token",
+																	"type": "string"
+																},
+																{
+																	"key": "authUrl",
+																	"value": "https://app.hubspot.com/oauth/authorize",
+																	"type": "string"
+																},
+																{
+																	"key": "grant_type",
+																	"value": "authorization_code",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"properties\": {\n    \"magna_81a\": \"<string>\",\n    \"in789\": \"<string>\"\n  }\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId?idProperty=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"crm",
+																"v3",
+																"objects",
+																"taxes",
+																":taxId"
+															],
+															"query": [
+																{
+																	"key": "idProperty",
+																	"value": "<string>",
+																	"description": "The name of a property whose values are unique for this object type"
+																}
+															],
+															"variable": [
+																{
+																	"key": "taxId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																}
+															]
+														},
+														"description": "Perform a partial update of an Object identified by `{taxId}`. `{taxId}` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string."
+													},
+													"response": [
+														{
+															"id": "064c07bd-aa69-4ad1-98b5-6ab847bd8268",
+															"name": "successful operation",
+															"originalRequest": {
+																"method": "PATCH",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"properties\": {\n    \"magna_81a\": \"<string>\",\n    \"in789\": \"<string>\"\n  }\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId?idProperty=<string>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		":taxId"
+																	],
+																	"query": [
+																		{
+																			"description": "The name of a property whose values are unique for this object type",
+																			"key": "idProperty",
+																			"value": "<string>"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "taxId"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"createdAt\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"properties\": {\n    \"id2\": \"<string>\",\n    \"adipisicing2dc\": \"<string>\",\n    \"culpa09\": \"<string>\"\n  },\n  \"updatedAt\": \"<dateTime>\",\n  \"propertiesWithHistory\": {\n    \"deserunt836\": [\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      },\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      }\n    ],\n    \"eaf3\": [\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      },\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      }\n    ]\n  },\n  \"archived\": \"<boolean>\",\n  \"archivedAt\": \"<dateTime>\"\n}"
+														},
+														{
+															"id": "ff9d49b8-d962-498b-820e-c1419694929a",
+															"name": "An error occurred.",
+															"originalRequest": {
+																"method": "PATCH",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"properties\": {\n    \"magna_81a\": \"<string>\",\n    \"in789\": \"<string>\"\n  }\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId?idProperty=<string>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		":taxId"
+																	],
+																	"query": [
+																		{
+																			"description": "The name of a property whose values are unique for this object type",
+																			"key": "idProperty",
+																			"value": "<string>"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "taxId"
+																		}
+																	]
+																}
+															},
+															"status": "Internal Server Error",
+															"code": 500,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+														}
+													]
+												}
+											],
+											"id": "7573095b-12e9-468f-9933-10ac06017caa"
+										},
+										{
+											"name": "batch",
+											"item": [
+												{
+													"name": "update",
+													"item": [
+														{
+															"name": "Update a batch of taxes",
+															"id": "8008d1b1-4d0a-4dc1-a073-b0a682d74599",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "oauth2",
+																	"oauth2": [
+																		{
+																			"key": "scope",
+																			"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+																			"type": "string"
+																		},
+																		{
+																			"key": "accessTokenUrl",
+																			"value": "https://api.hubapi.com/oauth/v1/token",
+																			"type": "string"
+																		},
+																		{
+																			"key": "authUrl",
+																			"value": "https://app.hubspot.com/oauth/authorize",
+																			"type": "string"
+																		},
+																		{
+																			"key": "grant_type",
+																			"value": "authorization_code",
+																			"type": "string"
+																		}
+																	]
+																},
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"inputs\": [\n    {\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"proident_ff\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"laboris989\": \"<string>\"\n      }\n    }\n  ]\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/update",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		"batch",
+																		"update"
+																	]
+																}
+															},
+															"response": [
+																{
+																	"id": "b85251e5-93de-446a-a2ab-eee30e9ffcb2",
+																	"name": "successful operation",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: oauth2",
+																				"key": "Authorization",
+																				"value": "<token>"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"inputs\": [\n    {\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"proident_ff\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"laboris989\": \"<string>\"\n      }\n    }\n  ]\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/update",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"crm",
+																				"v3",
+																				"objects",
+																				"taxes",
+																				"batch",
+																				"update"
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"completedAt\": \"<dateTime>\",\n  \"results\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"proident_6\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"laboris_14\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"commodo_b\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"in__51\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    }\n  ],\n  \"startedAt\": \"<dateTime>\",\n  \"status\": \"PENDING\",\n  \"requestedAt\": \"<dateTime>\",\n  \"links\": {\n    \"irureb91\": \"<string>\",\n    \"deserunt_8f6\": \"<string>\",\n    \"officia_\": \"<string>\"\n  }\n}"
+																},
+																{
+																	"id": "e563a83d-faef-4a69-9d47-e28cdcb56546",
+																	"name": "multiple statuses",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: oauth2",
+																				"key": "Authorization",
+																				"value": "<token>"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"inputs\": [\n    {\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"proident_ff\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"laboris989\": \"<string>\"\n      }\n    }\n  ]\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/update",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"crm",
+																				"v3",
+																				"objects",
+																				"taxes",
+																				"batch",
+																				"update"
+																			]
+																		}
+																	},
+																	"status": "Multi-Status (WebDAV) (RFC 4918)",
+																	"code": 207,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"completedAt\": \"<dateTime>\",\n  \"results\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"reprehenderitf\": \"<string>\",\n        \"non_9\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"Ut_e\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ],\n        \"in22\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"anim9b\": \"<string>\",\n        \"in2f\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"ullamco_4cf\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ],\n        \"dolord0f\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    }\n  ],\n  \"startedAt\": \"<dateTime>\",\n  \"status\": \"CANCELED\",\n  \"numErrors\": \"<integer>\",\n  \"errors\": [\n    {\n      \"category\": \"<string>\",\n      \"context\": {\n        \"magna_3e5\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"errors\": [\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"qui_d\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"aute_d\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        },\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"enim_36_\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        }\n      ],\n      \"links\": {\n        \"irureae\": \"<string>\",\n        \"estd\": \"<string>\"\n      },\n      \"message\": \"<string>\",\n      \"status\": \"<string>\",\n      \"id\": \"<string>\",\n      \"subCategory\": {}\n    },\n    {\n      \"category\": \"<string>\",\n      \"context\": {\n        \"dolor__\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"errors\": [\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"velit50f\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"anim530\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"laboris3\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        },\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"laborum18\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        }\n      ],\n      \"links\": {\n        \"ullamco1d4\": \"<string>\",\n        \"laborumc\": \"<string>\",\n        \"dolor_8\": \"<string>\"\n      },\n      \"message\": \"<string>\",\n      \"status\": \"<string>\",\n      \"id\": \"<string>\",\n      \"subCategory\": {}\n    }\n  ],\n  \"requestedAt\": \"<dateTime>\",\n  \"links\": {\n    \"laboruma\": \"<string>\",\n    \"mollit_5\": \"<string>\"\n  }\n}"
+																},
+																{
+																	"id": "2054a571-a807-4db5-a43a-c803d4408c4c",
+																	"name": "An error occurred.",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: oauth2",
+																				"key": "Authorization",
+																				"value": "<token>"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"inputs\": [\n    {\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"proident_ff\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"laboris989\": \"<string>\"\n      }\n    }\n  ]\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/update",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"crm",
+																				"v3",
+																				"objects",
+																				"taxes",
+																				"batch",
+																				"update"
+																			]
+																		}
+																	},
+																	"status": "Internal Server Error",
+																	"code": 500,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+																}
+															]
+														}
+													],
+													"id": "81d8ee2f-9eb9-423b-af3a-09f21301fe2b"
+												},
+												{
+													"name": "create",
+													"item": [
+														{
+															"name": "Create a batch of taxes",
+															"id": "fe6123cd-7bcb-48fc-88cc-d43453619ac7",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "oauth2",
+																	"oauth2": [
+																		{
+																			"key": "scope",
+																			"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+																			"type": "string"
+																		},
+																		{
+																			"key": "accessTokenUrl",
+																			"value": "https://api.hubapi.com/oauth/v1/token",
+																			"type": "string"
+																		},
+																		{
+																			"key": "authUrl",
+																			"value": "https://app.hubspot.com/oauth/authorize",
+																			"type": "string"
+																		},
+																		{
+																			"key": "grant_type",
+																			"value": "authorization_code",
+																			"type": "string"
+																		}
+																	]
+																},
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"inputs\": [\n    {\n      \"associations\": [\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"INTEGRATOR_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        },\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        }\n      ],\n      \"properties\": {\n        \"sint_2\": \"<string>\",\n        \"sitb_\": \"<string>\"\n      }\n    },\n    {\n      \"associations\": [\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"HUBSPOT_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        },\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"HUBSPOT_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"INTEGRATOR_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        }\n      ],\n      \"properties\": {\n        \"qui_f\": \"<string>\",\n        \"Ut_032\": \"<string>\",\n        \"Excepteur_7d1\": \"<string>\",\n        \"incididunta\": \"<string>\"\n      }\n    }\n  ]\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/create",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		"batch",
+																		"create"
+																	]
+																}
+															},
+															"response": [
+																{
+																	"id": "4b6e8229-1035-4e2a-9bb5-99fa981efe6d",
+																	"name": "successful operation",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: oauth2",
+																				"key": "Authorization",
+																				"value": "<token>"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"inputs\": [\n    {\n      \"associations\": [\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"INTEGRATOR_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        },\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        }\n      ],\n      \"properties\": {\n        \"sint_2\": \"<string>\",\n        \"sitb_\": \"<string>\"\n      }\n    },\n    {\n      \"associations\": [\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"HUBSPOT_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        },\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"HUBSPOT_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"INTEGRATOR_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        }\n      ],\n      \"properties\": {\n        \"qui_f\": \"<string>\",\n        \"Ut_032\": \"<string>\",\n        \"Excepteur_7d1\": \"<string>\",\n        \"incididunta\": \"<string>\"\n      }\n    }\n  ]\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/create",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"crm",
+																				"v3",
+																				"objects",
+																				"taxes",
+																				"batch",
+																				"create"
+																			]
+																		}
+																	},
+																	"status": "Created",
+																	"code": 201,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"completedAt\": \"<dateTime>\",\n  \"results\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"proident_6\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"laboris_14\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"commodo_b\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"in__51\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    }\n  ],\n  \"startedAt\": \"<dateTime>\",\n  \"status\": \"PENDING\",\n  \"requestedAt\": \"<dateTime>\",\n  \"links\": {\n    \"irureb91\": \"<string>\",\n    \"deserunt_8f6\": \"<string>\",\n    \"officia_\": \"<string>\"\n  }\n}"
+																},
+																{
+																	"id": "34c10f68-d177-4eb9-a28e-1b85409a9987",
+																	"name": "multiple statuses",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: oauth2",
+																				"key": "Authorization",
+																				"value": "<token>"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"inputs\": [\n    {\n      \"associations\": [\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"INTEGRATOR_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        },\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        }\n      ],\n      \"properties\": {\n        \"sint_2\": \"<string>\",\n        \"sitb_\": \"<string>\"\n      }\n    },\n    {\n      \"associations\": [\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"HUBSPOT_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        },\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"HUBSPOT_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"INTEGRATOR_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        }\n      ],\n      \"properties\": {\n        \"qui_f\": \"<string>\",\n        \"Ut_032\": \"<string>\",\n        \"Excepteur_7d1\": \"<string>\",\n        \"incididunta\": \"<string>\"\n      }\n    }\n  ]\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/create",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"crm",
+																				"v3",
+																				"objects",
+																				"taxes",
+																				"batch",
+																				"create"
+																			]
+																		}
+																	},
+																	"status": "Multi-Status (WebDAV) (RFC 4918)",
+																	"code": 207,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"completedAt\": \"<dateTime>\",\n  \"results\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"reprehenderitf\": \"<string>\",\n        \"non_9\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"Ut_e\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ],\n        \"in22\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"anim9b\": \"<string>\",\n        \"in2f\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"ullamco_4cf\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ],\n        \"dolord0f\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    }\n  ],\n  \"startedAt\": \"<dateTime>\",\n  \"status\": \"CANCELED\",\n  \"numErrors\": \"<integer>\",\n  \"errors\": [\n    {\n      \"category\": \"<string>\",\n      \"context\": {\n        \"magna_3e5\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"errors\": [\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"qui_d\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"aute_d\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        },\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"enim_36_\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        }\n      ],\n      \"links\": {\n        \"irureae\": \"<string>\",\n        \"estd\": \"<string>\"\n      },\n      \"message\": \"<string>\",\n      \"status\": \"<string>\",\n      \"id\": \"<string>\",\n      \"subCategory\": {}\n    },\n    {\n      \"category\": \"<string>\",\n      \"context\": {\n        \"dolor__\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"errors\": [\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"velit50f\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"anim530\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"laboris3\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        },\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"laborum18\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        }\n      ],\n      \"links\": {\n        \"ullamco1d4\": \"<string>\",\n        \"laborumc\": \"<string>\",\n        \"dolor_8\": \"<string>\"\n      },\n      \"message\": \"<string>\",\n      \"status\": \"<string>\",\n      \"id\": \"<string>\",\n      \"subCategory\": {}\n    }\n  ],\n  \"requestedAt\": \"<dateTime>\",\n  \"links\": {\n    \"laboruma\": \"<string>\",\n    \"mollit_5\": \"<string>\"\n  }\n}"
+																},
+																{
+																	"id": "d4367391-d431-4437-8b18-feeca09183b5",
+																	"name": "An error occurred.",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: oauth2",
+																				"key": "Authorization",
+																				"value": "<token>"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"inputs\": [\n    {\n      \"associations\": [\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"INTEGRATOR_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        },\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        }\n      ],\n      \"properties\": {\n        \"sint_2\": \"<string>\",\n        \"sitb_\": \"<string>\"\n      }\n    },\n    {\n      \"associations\": [\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"USER_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"HUBSPOT_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        },\n        {\n          \"to\": {\n            \"id\": \"<string>\"\n          },\n          \"types\": [\n            {\n              \"associationCategory\": \"HUBSPOT_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            },\n            {\n              \"associationCategory\": \"INTEGRATOR_DEFINED\",\n              \"associationTypeId\": \"<integer>\"\n            }\n          ]\n        }\n      ],\n      \"properties\": {\n        \"qui_f\": \"<string>\",\n        \"Ut_032\": \"<string>\",\n        \"Excepteur_7d1\": \"<string>\",\n        \"incididunta\": \"<string>\"\n      }\n    }\n  ]\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/create",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"crm",
+																				"v3",
+																				"objects",
+																				"taxes",
+																				"batch",
+																				"create"
+																			]
+																		}
+																	},
+																	"status": "Internal Server Error",
+																	"code": 500,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+																}
+															]
+														}
+													],
+													"id": "2162081f-e7b2-4efd-aa1c-797034db2088"
+												},
+												{
+													"name": "read",
+													"item": [
+														{
+															"name": "Read a batch of taxes by internal ID, or unique property values",
+															"id": "e261f560-107f-4e8c-8d78-b0b78b0088e4",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "oauth2",
+																	"oauth2": [
+																		{
+																			"key": "scope",
+																			"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+																			"type": "string"
+																		},
+																		{
+																			"key": "accessTokenUrl",
+																			"value": "https://api.hubapi.com/oauth/v1/token",
+																			"type": "string"
+																		},
+																		{
+																			"key": "authUrl",
+																			"value": "https://app.hubspot.com/oauth/authorize",
+																			"type": "string"
+																		},
+																		{
+																			"key": "grant_type",
+																			"value": "authorization_code",
+																			"type": "string"
+																		}
+																	]
+																},
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"inputs\": [\n    {\n      \"id\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\"\n    }\n  ],\n  \"properties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"propertiesWithHistory\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"idProperty\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/read?archived=false",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		"batch",
+																		"read"
+																	],
+																	"query": [
+																		{
+																			"key": "archived",
+																			"value": "false",
+																			"description": "Whether to return only results that have been archived."
+																		}
+																	]
+																}
+															},
+															"response": [
+																{
+																	"id": "07e2b21b-87c1-4377-a9a3-263752345838",
+																	"name": "successful operation",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: oauth2",
+																				"key": "Authorization",
+																				"value": "<token>"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"inputs\": [\n    {\n      \"id\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\"\n    }\n  ],\n  \"properties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"propertiesWithHistory\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"idProperty\": \"<string>\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/read?archived=false",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"crm",
+																				"v3",
+																				"objects",
+																				"taxes",
+																				"batch",
+																				"read"
+																			],
+																			"query": [
+																				{
+																					"description": "Whether to return only results that have been archived.",
+																					"key": "archived",
+																					"value": "false"
+																				}
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"completedAt\": \"<dateTime>\",\n  \"results\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"proident_6\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"laboris_14\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"commodo_b\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"in__51\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    }\n  ],\n  \"startedAt\": \"<dateTime>\",\n  \"status\": \"PENDING\",\n  \"requestedAt\": \"<dateTime>\",\n  \"links\": {\n    \"irureb91\": \"<string>\",\n    \"deserunt_8f6\": \"<string>\",\n    \"officia_\": \"<string>\"\n  }\n}"
+																},
+																{
+																	"id": "b21fa2c7-4fba-4f0d-b4e7-cebd4de7156e",
+																	"name": "multiple statuses",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: oauth2",
+																				"key": "Authorization",
+																				"value": "<token>"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"inputs\": [\n    {\n      \"id\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\"\n    }\n  ],\n  \"properties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"propertiesWithHistory\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"idProperty\": \"<string>\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/read?archived=false",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"crm",
+																				"v3",
+																				"objects",
+																				"taxes",
+																				"batch",
+																				"read"
+																			],
+																			"query": [
+																				{
+																					"description": "Whether to return only results that have been archived.",
+																					"key": "archived",
+																					"value": "false"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Multi-Status (WebDAV) (RFC 4918)",
+																	"code": 207,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"completedAt\": \"<dateTime>\",\n  \"results\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"reprehenderitf\": \"<string>\",\n        \"non_9\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"Ut_e\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ],\n        \"in22\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"anim9b\": \"<string>\",\n        \"in2f\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"ullamco_4cf\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ],\n        \"dolord0f\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    }\n  ],\n  \"startedAt\": \"<dateTime>\",\n  \"status\": \"CANCELED\",\n  \"numErrors\": \"<integer>\",\n  \"errors\": [\n    {\n      \"category\": \"<string>\",\n      \"context\": {\n        \"magna_3e5\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"errors\": [\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"qui_d\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"aute_d\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        },\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"enim_36_\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        }\n      ],\n      \"links\": {\n        \"irureae\": \"<string>\",\n        \"estd\": \"<string>\"\n      },\n      \"message\": \"<string>\",\n      \"status\": \"<string>\",\n      \"id\": \"<string>\",\n      \"subCategory\": {}\n    },\n    {\n      \"category\": \"<string>\",\n      \"context\": {\n        \"dolor__\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"errors\": [\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"velit50f\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"anim530\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"laboris3\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        },\n        {\n          \"message\": \"<string>\",\n          \"in\": \"<string>\",\n          \"code\": \"<string>\",\n          \"subCategory\": \"<string>\",\n          \"context\": {\n            \"laborum18\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          }\n        }\n      ],\n      \"links\": {\n        \"ullamco1d4\": \"<string>\",\n        \"laborumc\": \"<string>\",\n        \"dolor_8\": \"<string>\"\n      },\n      \"message\": \"<string>\",\n      \"status\": \"<string>\",\n      \"id\": \"<string>\",\n      \"subCategory\": {}\n    }\n  ],\n  \"requestedAt\": \"<dateTime>\",\n  \"links\": {\n    \"laboruma\": \"<string>\",\n    \"mollit_5\": \"<string>\"\n  }\n}"
+																},
+																{
+																	"id": "2bcfe56d-241b-4a88-86b0-0178d1923489",
+																	"name": "An error occurred.",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: oauth2",
+																				"key": "Authorization",
+																				"value": "<token>"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"inputs\": [\n    {\n      \"id\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\"\n    }\n  ],\n  \"properties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"propertiesWithHistory\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"idProperty\": \"<string>\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/read?archived=false",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"crm",
+																				"v3",
+																				"objects",
+																				"taxes",
+																				"batch",
+																				"read"
+																			],
+																			"query": [
+																				{
+																					"description": "Whether to return only results that have been archived.",
+																					"key": "archived",
+																					"value": "false"
+																				}
+																			]
+																		}
+																	},
+																	"status": "Internal Server Error",
+																	"code": 500,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+																}
+															]
+														}
+													],
+													"id": "7c3874d2-d085-4265-b578-e8d7f8ef1c3f"
+												},
+												{
+													"name": "archive",
+													"item": [
+														{
+															"name": "Archive a batch of taxes by ID",
+															"id": "976b9d90-3866-40c5-9e12-e5b244458956",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "oauth2",
+																	"oauth2": [
+																		{
+																			"key": "scope",
+																			"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+																			"type": "string"
+																		},
+																		{
+																			"key": "accessTokenUrl",
+																			"value": "https://api.hubapi.com/oauth/v1/token",
+																			"type": "string"
+																		},
+																		{
+																			"key": "authUrl",
+																			"value": "https://app.hubspot.com/oauth/authorize",
+																			"type": "string"
+																		},
+																		{
+																			"key": "grant_type",
+																			"value": "authorization_code",
+																			"type": "string"
+																		}
+																	]
+																},
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"inputs\": [\n    {\n      \"id\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\"\n    }\n  ]\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/archive",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		"batch",
+																		"archive"
+																	]
+																}
+															},
+															"response": [
+																{
+																	"id": "29261285-221a-4a4b-98ec-2df92c7008dc",
+																	"name": "No content",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: oauth2",
+																				"key": "Authorization",
+																				"value": "<token>"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"inputs\": [\n    {\n      \"id\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\"\n    }\n  ]\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/archive",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"crm",
+																				"v3",
+																				"objects",
+																				"taxes",
+																				"batch",
+																				"archive"
+																			]
+																		}
+																	},
+																	"status": "No Content",
+																	"code": 204,
+																	"_postman_previewlanguage": "text",
+																	"header": [],
+																	"cookie": []
+																},
+																{
+																	"id": "0bd6f171-b8b0-412a-ab52-adfd741d73fe",
+																	"name": "An error occurred.",
+																	"originalRequest": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "*/*"
+																			},
+																			{
+																				"description": "Added as a part of security scheme: oauth2",
+																				"key": "Authorization",
+																				"value": "<token>"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"inputs\": [\n    {\n      \"id\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\"\n    }\n  ]\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/crm/v3/objects/taxes/batch/archive",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"crm",
+																				"v3",
+																				"objects",
+																				"taxes",
+																				"batch",
+																				"archive"
+																			]
+																		}
+																	},
+																	"status": "Internal Server Error",
+																	"code": 500,
+																	"_postman_previewlanguage": "text",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "*/*"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+																}
+															]
+														}
+													],
+													"id": "b65135f8-f32d-41df-8230-2d726fc16c26"
+												}
+											],
+											"id": "f796f8fd-10ba-4304-a4fb-5a14bf46ac24"
+										},
+										{
+											"name": "search",
+											"item": [
+												{
+													"name": "post-/crm/v3/objects/taxes/search",
+													"id": "1695efe1-9b91-4c72-b148-a3b83618d8bb",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "oauth2",
+															"oauth2": [
+																{
+																	"key": "scope",
+																	"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+																	"type": "string"
+																},
+																{
+																	"key": "accessTokenUrl",
+																	"value": "https://api.hubapi.com/oauth/v1/token",
+																	"type": "string"
+																},
+																{
+																	"key": "authUrl",
+																	"value": "https://app.hubspot.com/oauth/authorize",
+																	"type": "string"
+																},
+																{
+																	"key": "grant_type",
+																	"value": "authorization_code",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"after\": \"<integer>\",\n  \"filterGroups\": [\n    {\n      \"filters\": [\n        {\n          \"operator\": \"EQ\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        {\n          \"operator\": \"GT\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      ]\n    },\n    {\n      \"filters\": [\n        {\n          \"operator\": \"GT\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        {\n          \"operator\": \"NOT_IN\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"limit\": \"<integer>\",\n  \"properties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"sorts\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/crm/v3/objects/taxes/search",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"crm",
+																"v3",
+																"objects",
+																"taxes",
+																"search"
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "f672c22f-d1f1-4704-8bdb-18d659d06347",
+															"name": "successful operation",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"after\": \"<integer>\",\n  \"filterGroups\": [\n    {\n      \"filters\": [\n        {\n          \"operator\": \"EQ\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        {\n          \"operator\": \"GT\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      ]\n    },\n    {\n      \"filters\": [\n        {\n          \"operator\": \"GT\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        {\n          \"operator\": \"NOT_IN\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"limit\": \"<integer>\",\n  \"properties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"sorts\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/search",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		"search"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"results\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"magna20\": \"<string>\",\n        \"Lorem_f4\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"temporb\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ],\n        \"cillum69\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"non_872\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"elit_6_\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ],\n        \"sint634\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ],\n        \"quis_e\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\"\n    }\n  ],\n  \"total\": \"<integer>\",\n  \"paging\": {\n    \"next\": {\n      \"after\": \"<string>\",\n      \"link\": \"<string>\"\n    }\n  }\n}"
+														},
+														{
+															"id": "4326f9e1-57b1-4ae3-b7a6-3eb27538e2b2",
+															"name": "An error occurred.",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	},
+																	{
+																		"description": "Added as a part of security scheme: oauth2",
+																		"key": "Authorization",
+																		"value": "<token>"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"after\": \"<integer>\",\n  \"filterGroups\": [\n    {\n      \"filters\": [\n        {\n          \"operator\": \"EQ\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        {\n          \"operator\": \"GT\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      ]\n    },\n    {\n      \"filters\": [\n        {\n          \"operator\": \"GT\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        {\n          \"operator\": \"NOT_IN\",\n          \"propertyName\": \"<string>\",\n          \"value\": \"<string>\",\n          \"highValue\": \"<string>\",\n          \"values\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"limit\": \"<integer>\",\n  \"properties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"sorts\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"query\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/search",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"crm",
+																		"v3",
+																		"objects",
+																		"taxes",
+																		"search"
+																	]
+																}
+															},
+															"status": "Internal Server Error",
+															"code": 500,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+														}
+													]
+												}
+											],
+											"id": "f9d8da03-5e8c-4d18-9aa1-934eaf7ba38c"
+										},
+										{
+											"name": "List",
+											"id": "c6fb6457-dad3-429e-9dab-b60c04c8696d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "oauth2",
+													"oauth2": [
+														{
+															"key": "scope",
+															"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+															"type": "string"
+														},
+														{
+															"key": "accessTokenUrl",
+															"value": "https://api.hubapi.com/oauth/v1/token",
+															"type": "string"
+														},
+														{
+															"key": "authUrl",
+															"value": "https://app.hubspot.com/oauth/authorize",
+															"type": "string"
+														},
+														{
+															"key": "grant_type",
+															"value": "authorization_code",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/crm/v3/objects/taxes?limit=10&after=<string>&properties=<string>&properties=<string>&propertiesWithHistory=<string>&propertiesWithHistory=<string>&associations=<string>&associations=<string>&archived=false",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"crm",
+														"v3",
+														"objects",
+														"taxes"
+													],
+													"query": [
+														{
+															"key": "limit",
+															"value": "10",
+															"description": "The maximum number of results to display per page."
+														},
+														{
+															"key": "after",
+															"value": "<string>",
+															"description": "The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results."
+														},
+														{
+															"key": "properties",
+															"value": "<string>",
+															"description": "A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored."
+														},
+														{
+															"key": "properties",
+															"value": "<string>",
+															"description": "A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored."
+														},
+														{
+															"key": "propertiesWithHistory",
+															"value": "<string>",
+															"description": "A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request."
+														},
+														{
+															"key": "propertiesWithHistory",
+															"value": "<string>",
+															"description": "A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request."
+														},
+														{
+															"key": "associations",
+															"value": "<string>",
+															"description": "A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored."
+														},
+														{
+															"key": "associations",
+															"value": "<string>",
+															"description": "A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored."
+														},
+														{
+															"key": "archived",
+															"value": "false",
+															"description": "Whether to return only results that have been archived."
+														}
+													]
+												},
+												"description": "Read a page of taxes. Control what is returned via the `properties` query param."
+											},
+											"response": [
+												{
+													"id": "30f24add-1eb0-4aa1-9942-19b8560829a7",
+													"name": "successful operation",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"description": "Added as a part of security scheme: oauth2",
+																"key": "Authorization",
+																"value": "<token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/crm/v3/objects/taxes?limit=10&after=<string>&properties=<string>&propertiesWithHistory=<string>&associations=<string>&archived=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"crm",
+																"v3",
+																"objects",
+																"taxes"
+															],
+															"query": [
+																{
+																	"description": "The maximum number of results to display per page.",
+																	"key": "limit",
+																	"value": "10"
+																},
+																{
+																	"description": "The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.",
+																	"key": "after",
+																	"value": "<string>"
+																},
+																{
+																	"description": "A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.",
+																	"key": "properties",
+																	"value": "<string>"
+																},
+																{
+																	"description": "A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.",
+																	"key": "propertiesWithHistory",
+																	"value": "<string>"
+																},
+																{
+																	"description": "A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.",
+																	"key": "associations",
+																	"value": "<string>"
+																},
+																{
+																	"description": "Whether to return only results that have been archived.",
+																	"key": "archived",
+																	"value": "false"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"results\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"laborum0c3\": \"<string>\",\n        \"laborisef\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"veniam_c7\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ],\n        \"pariatur_5c5\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ],\n        \"enimc7\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\",\n      \"associations\": {\n        \"ex3\": {\n          \"results\": [\n            {\n              \"id\": \"<string>\",\n              \"type\": \"<string>\"\n            },\n            {\n              \"id\": \"<string>\",\n              \"type\": \"<string>\"\n            }\n          ],\n          \"paging\": {\n            \"next\": {\n              \"after\": \"<string>\",\n              \"link\": \"<string>\"\n            },\n            \"prev\": {\n              \"before\": \"<string>\",\n              \"link\": \"<string>\"\n            }\n          }\n        },\n        \"ut670\": {\n          \"results\": [\n            {\n              \"id\": \"<string>\",\n              \"type\": \"<string>\"\n            },\n            {\n              \"id\": \"<string>\",\n              \"type\": \"<string>\"\n            }\n          ],\n          \"paging\": {\n            \"next\": {\n              \"after\": \"<string>\",\n              \"link\": \"<string>\"\n            },\n            \"prev\": {\n              \"before\": \"<string>\",\n              \"link\": \"<string>\"\n            }\n          }\n        }\n      }\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"properties\": {\n        \"laborecd8\": \"<string>\",\n        \"tempor57\": \"<string>\",\n        \"est_1a\": \"<string>\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"propertiesWithHistory\": {\n        \"reprehenderit_d9\": [\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          },\n          {\n            \"sourceType\": \"<string>\",\n            \"timestamp\": \"<dateTime>\",\n            \"value\": \"<string>\",\n            \"sourceId\": \"<string>\",\n            \"sourceLabel\": \"<string>\",\n            \"updatedByUserId\": \"<integer>\"\n          }\n        ]\n      },\n      \"archived\": \"<boolean>\",\n      \"archivedAt\": \"<dateTime>\",\n      \"associations\": {\n        \"non_a\": {\n          \"results\": [\n            {\n              \"id\": \"<string>\",\n              \"type\": \"<string>\"\n            },\n            {\n              \"id\": \"<string>\",\n              \"type\": \"<string>\"\n            }\n          ],\n          \"paging\": {\n            \"next\": {\n              \"after\": \"<string>\",\n              \"link\": \"<string>\"\n            },\n            \"prev\": {\n              \"before\": \"<string>\",\n              \"link\": \"<string>\"\n            }\n          }\n        }\n      }\n    }\n  ],\n  \"paging\": {\n    \"next\": {\n      \"after\": \"<string>\",\n      \"link\": \"<string>\"\n    }\n  }\n}"
+												},
+												{
+													"id": "68a47c56-cc55-4a05-883d-3a2c7b901a98",
+													"name": "An error occurred.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: oauth2",
+																"key": "Authorization",
+																"value": "<token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/crm/v3/objects/taxes?limit=10&after=<string>&properties=<string>&propertiesWithHistory=<string>&associations=<string>&archived=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"crm",
+																"v3",
+																"objects",
+																"taxes"
+															],
+															"query": [
+																{
+																	"description": "The maximum number of results to display per page.",
+																	"key": "limit",
+																	"value": "10"
+																},
+																{
+																	"description": "The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.",
+																	"key": "after",
+																	"value": "<string>"
+																},
+																{
+																	"description": "A comma separated list of the properties to be returned in the response. If any of the specified properties are not present on the requested object(s), they will be ignored.",
+																	"key": "properties",
+																	"value": "<string>"
+																},
+																{
+																	"description": "A comma separated list of the properties to be returned along with their history of previous values. If any of the specified properties are not present on the requested object(s), they will be ignored. Usage of this parameter will reduce the maximum number of objects that can be read by a single request.",
+																	"key": "propertiesWithHistory",
+																	"value": "<string>"
+																},
+																{
+																	"description": "A comma separated list of object types to retrieve associated IDs for. If any of the specified associations do not exist, they will be ignored.",
+																	"key": "associations",
+																	"value": "<string>"
+																},
+																{
+																	"description": "Whether to return only results that have been archived.",
+																	"key": "archived",
+																	"value": "false"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Create",
+											"id": "f4fe63d4-cacc-4553-b070-62d5b433b18d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "oauth2",
+													"oauth2": [
+														{
+															"key": "scope",
+															"value": "crm.objects.line_items.read crm.objects.deals.read crm.objects.quotes.write crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.write crm.objects.companies.read crm.objects.line_items.write crm.objects.quotes.read crm.objects.deals.write",
+															"type": "string"
+														},
+														{
+															"key": "accessTokenUrl",
+															"value": "https://api.hubapi.com/oauth/v1/token",
+															"type": "string"
+														},
+														{
+															"key": "authUrl",
+															"value": "https://app.hubspot.com/oauth/authorize",
+															"type": "string"
+														},
+														{
+															"key": "grant_type",
+															"value": "authorization_code",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"associations\": [\n    {\n      \"to\": {\n        \"id\": \"<string>\"\n      },\n      \"types\": [\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        },\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        }\n      ]\n    },\n    {\n      \"to\": {\n        \"id\": \"<string>\"\n      },\n      \"types\": [\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        },\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        }\n      ]\n    }\n  ],\n  \"properties\": {\n    \"exfe9\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/crm/v3/objects/taxes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"crm",
+														"v3",
+														"objects",
+														"taxes"
+													]
+												},
+												"description": "Create a tax with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard taxes is provided."
+											},
+											"response": [
+												{
+													"id": "99bd0b9e-5e2b-4de3-be08-88c0e36fde51",
+													"name": "successful operation",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															},
+															{
+																"description": "Added as a part of security scheme: oauth2",
+																"key": "Authorization",
+																"value": "<token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"associations\": [\n    {\n      \"to\": {\n        \"id\": \"<string>\"\n      },\n      \"types\": [\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        },\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        }\n      ]\n    },\n    {\n      \"to\": {\n        \"id\": \"<string>\"\n      },\n      \"types\": [\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        },\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        }\n      ]\n    }\n  ],\n  \"properties\": {\n    \"exfe9\": \"<string>\"\n  }\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/crm/v3/objects/taxes",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"crm",
+																"v3",
+																"objects",
+																"taxes"
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"createdAt\": \"<dateTime>\",\n  \"id\": \"<string>\",\n  \"properties\": {\n    \"id2\": \"<string>\",\n    \"adipisicing2dc\": \"<string>\",\n    \"culpa09\": \"<string>\"\n  },\n  \"updatedAt\": \"<dateTime>\",\n  \"propertiesWithHistory\": {\n    \"deserunt836\": [\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      },\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      }\n    ],\n    \"eaf3\": [\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      },\n      {\n        \"sourceType\": \"<string>\",\n        \"timestamp\": \"<dateTime>\",\n        \"value\": \"<string>\",\n        \"sourceId\": \"<string>\",\n        \"sourceLabel\": \"<string>\",\n        \"updatedByUserId\": \"<integer>\"\n      }\n    ]\n  },\n  \"archived\": \"<boolean>\",\n  \"archivedAt\": \"<dateTime>\"\n}"
+												},
+												{
+													"id": "bd2d3fd4-418b-45de-a9fc-c4c18bcd4277",
+													"name": "An error occurred.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: oauth2",
+																"key": "Authorization",
+																"value": "<token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"associations\": [\n    {\n      \"to\": {\n        \"id\": \"<string>\"\n      },\n      \"types\": [\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        },\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        }\n      ]\n    },\n    {\n      \"to\": {\n        \"id\": \"<string>\"\n      },\n      \"types\": [\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        },\n        {\n          \"associationCategory\": \"INTEGRATOR_DEFINED\",\n          \"associationTypeId\": \"<integer>\"\n        }\n      ]\n    }\n  ],\n  \"properties\": {\n    \"exfe9\": \"<string>\"\n  }\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/crm/v3/objects/taxes",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"crm",
+																"v3",
+																"objects",
+																"taxes"
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"category\": \"<string>\",\n  \"correlationId\": \"<uuid>\",\n  \"message\": \"<string>\",\n  \"subCategory\": \"<string>\",\n  \"errors\": [\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"deserunt__\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"ullamco_c2_\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"commodo_63f\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id_f\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    },\n    {\n      \"message\": \"<string>\",\n      \"in\": \"<string>\",\n      \"code\": \"<string>\",\n      \"subCategory\": \"<string>\",\n      \"context\": {\n        \"sint_ee\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"in_e9\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      }\n    }\n  ],\n  \"context\": {\n    \"ad_50\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"ut__8d\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nullae\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"culpa2f\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"links\": {\n    \"reprehenderit_b70\": \"<string>\",\n    \"ina\": \"<string>\"\n  }\n}"
+												}
+											]
+										}
+									],
+									"id": "0c1a56b6-ab6c-407b-a10f-da0ac9a89eb4"
+								}
+							],
+							"id": "c8850ab9-804c-47b6-954c-210e5fd74dd2"
+						}
+					],
+					"id": "8a524152-d114-4d43-8322-5db1bc53d245"
+				}
+			],
+			"id": "6e739df6-926c-44e5-b95a-8515d2fd1f07"
+		}
+	],
+	"variable": [
+		{
+			"id": "7ab72e78-116f-4d2b-a27f-dd35498d74c6",
+			"key": "baseUrl",
+			"value": "{{baseURL}}"
+		}
+	]
+}
