@@ -23,6 +23,19 @@
 											"item": [
 												{
 													"name": "Merge two taxes with same type",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "c5b4ae15-b3d7-484b-969b-e72876a5e42a",
+																"exec": [
+																	""
+																],
+																"type": "text/javascript",
+																"packages": {}
+															}
+														}
+													],
 													"id": "f4d3c329-9903-4173-a3dc-eb79b8abb4e6",
 													"protocolProfileBehavior": {
 														"disableBodyPruning": true
@@ -2634,7 +2647,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f38acda7-7975-48cc-aed2-9bcfa26146c0",
+				"id": "90f2579d-30d4-4291-90df-7cb8e8fbd614",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -2645,7 +2658,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "7068b0f4-e3b4-49ec-a878-49ab6013003c",
+				"id": "ab2612ab-a92d-4ff9-992a-9b903115ae38",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -2656,9 +2669,9 @@
 	],
 	"variable": [
 		{
-			"id": "911fb290-87e2-4460-8441-57ec03c570d8",
+			"id": "83182a66-914d-470e-80c1-499ef54a24ee",
 			"key": "baseUrl",
-			"value": "https://6c9cc45a-6bee-4500-b714-3be2064bd386.mock.pstmn.io"
+			"value": "https://67282f1a-11ef-4675-bfbd-0e932466c1b4.mock.pstmn.io"
 		}
 	]
 }
