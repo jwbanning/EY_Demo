@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "3833d3db-72a9-4665-93f7-25dd79904ee4",
 		"name": "Taxes V3",
+		"description": "This the taxes V3 version that was derived from the OAS.  \nAgain the focus is to use this a demonstration of the\n\n- Consumer Lifecycle\n    \n- Producer Lifecycle\n    \n\n<img src=\"https://content.pstmn.io/c8b50715-d4b9-4abc-b648-1cc1de81ea02/RG9jdW1lbnRhdGlvLnBuZw==\" alt=\"\" height=\"342\" width=\"354\">",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_uid": "16443770-3833d3db-72a9-4665-93f7-25dd79904ee4"
 	},
@@ -133,9 +134,13 @@
 																	}
 																},
 																"url": {
-																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/merge",
+																	"raw": "https://67282f1a-11ef-4675-bfbd-0e932466c1b4.mock.pstmn.io/crm/v3/objects/taxes/merge",
+																	"protocol": "https",
 																	"host": [
-																		"{{baseUrl}}"
+																		"67282f1a-11ef-4675-bfbd-0e932466c1b4",
+																		"mock",
+																		"pstmn",
+																		"io"
 																	],
 																	"path": [
 																		"crm",
@@ -320,9 +325,13 @@
 																	}
 																},
 																"url": {
-																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/gdpr-delete",
+																	"raw": "https://67282f1a-11ef-4675-bfbd-0e932466c1b4.mock.pstmn.io/crm/v3/objects/taxes/gdpr-delete",
+																	"protocol": "https",
 																	"host": [
-																		"{{baseUrl}}"
+																		"67282f1a-11ef-4675-bfbd-0e932466c1b4",
+																		"mock",
+																		"pstmn",
+																		"io"
 																	],
 																	"path": [
 																		"crm",
@@ -526,9 +535,13 @@
 																	}
 																],
 																"url": {
-																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId?properties=<string>&propertiesWithHistory=<string>&associations=<string>&archived=false&idProperty=<string>",
+																	"raw": "https://67282f1a-11ef-4675-bfbd-0e932466c1b4.mock.pstmn.io/crm/v3/objects/taxes/:taxId?properties=<string>&propertiesWithHistory=<string>&associations=<string>&archived=false&idProperty=<string>",
+																	"protocol": "https",
 																	"host": [
-																		"{{baseUrl}}"
+																		"67282f1a-11ef-4675-bfbd-0e932466c1b4",
+																		"mock",
+																		"pstmn",
+																		"io"
 																	],
 																	"path": [
 																		"crm",
@@ -736,9 +749,13 @@
 																	}
 																],
 																"url": {
-																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId",
+																	"raw": "https://67282f1a-11ef-4675-bfbd-0e932466c1b4.mock.pstmn.io/crm/v3/objects/taxes/:taxId",
+																	"protocol": "https",
 																	"host": [
-																		"{{baseUrl}}"
+																		"67282f1a-11ef-4675-bfbd-0e932466c1b4",
+																		"mock",
+																		"pstmn",
+																		"io"
 																	],
 																	"path": [
 																		"crm",
@@ -925,9 +942,13 @@
 																	}
 																},
 																"url": {
-																	"raw": "{{baseUrl}}/crm/v3/objects/taxes/:taxId?idProperty=<string>",
+																	"raw": "https://67282f1a-11ef-4675-bfbd-0e932466c1b4.mock.pstmn.io/crm/v3/objects/taxes/:taxId?idProperty=<string>",
+																	"protocol": "https",
 																	"host": [
-																		"{{baseUrl}}"
+																		"67282f1a-11ef-4675-bfbd-0e932466c1b4",
+																		"mock",
+																		"pstmn",
+																		"io"
 																	],
 																	"path": [
 																		"crm",
@@ -2728,14 +2749,15 @@
 					"id": "bf054f13-cacc-4074-a710-c2740832cc32"
 				}
 			],
-			"id": "ee0cbbd9-7a9e-4d5e-bede-2d87f9ef9f70"
+			"id": "ee0cbbd9-7a9e-4d5e-bede-2d87f9ef9f70",
+			"description": "nested folder to contain the API endpoints."
 		}
 	],
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "90f2579d-30d4-4291-90df-7cb8e8fbd614",
+				"id": "36681394-029d-4c04-a038-07d442e5f484",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -2746,7 +2768,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ab2612ab-a92d-4ff9-992a-9b903115ae38",
+				"id": "9a40edbf-c88b-4c98-81db-4c30cecb3a0b",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -2757,9 +2779,9 @@
 	],
 	"variable": [
 		{
-			"id": "83182a66-914d-470e-80c1-499ef54a24ee",
+			"id": "3ff5839f-489d-42f1-b98f-7f922b27c9a0",
 			"key": "baseUrl",
-			"value": "https://67282f1a-11ef-4675-bfbd-0e932466c1b4.mock.pstmn.io"
+			"value": "https://da2234b5-69ed-4555-88df-5e12d56562c4.mock.pstmn.io"
 		}
 	]
 }
